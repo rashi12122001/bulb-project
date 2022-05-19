@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bulb</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      background-color: rgb(255, 188, 62);
+      color: rgb(251, 248, 237);
+    }
+    #bulb {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 2rem;
+    }
+  </style>
+  <body>
+    <p>Click on the lightbulb to turn it on or off</p>
+    <img
+      id="bulb"
+      onclick="fun()"
+      src="bulb_off.png"
+      alt="bulb"
+      width="200px"
+    />
+    <!-- <div>
+      <p>hiiiiiiiiiiii</p>
+      <img src="\bulb-project\image-removebg-preview.png" alt="image" />
+    </div> -->
+    <script>
+      function fun() {
+        var image = document.getElementById("bulb");
+        if (image.src.match("bulb_off")) {
+          image.src = "\image-removebg-preview.png";
+        } else {
+          image.src = "bulb_off.png";
+        }
+      }
+    </script>
+  </body>
+</html>
